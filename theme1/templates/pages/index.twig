@@ -1,0 +1,13 @@
+{% extends 'layouts/default.twig' %}
+
+{% block page %}
+        <div id="theme-main" class="container">
+        <carousel>
+            {% for product in catalog.products %}
+            <slide>
+                <img src="{{product.images[0].source_url|raw}}" />
+            </slide>
+            {% endfor %}
+        </carousel>
+        </div>
+{% endblock %}
